@@ -11,6 +11,7 @@
         <tr>
             <th scope="col" width="50px">#</th>
             <th scope="col">Name</th>
+            <th scope="col">Order</th>
             <th scope="col"></th>
         </tr>
         </thead>
@@ -19,6 +20,7 @@
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
                 <td>{{ $section->name }}</td>
+                <td>{{ $section->order }}</td>
                 <td align="right">
                     <a href="{{ route('admin.clearance.clearance-section.show', [ $clearance->id, $section->id ]) }}" class="btn btn-primary"> Show </a>
                     <a href="{{ route('admin.clearance.clearance-section.edit', [ $clearance->id, $section->id ]) }}" class="btn btn-primary"> Edit </a>

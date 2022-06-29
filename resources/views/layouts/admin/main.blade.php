@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title','JKUAT Graduation Clearance')</title>
+    <title>@yield('title', 'JKUAT') {{ config('app.name') }}</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -84,7 +84,7 @@
         <!-- Brand Logo -->
         <a href="{{ route('admin.index') }}" class="brand-link">
             <img src="/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">BURSARY APP</span>
+            <span class="brand-text font-weight-light">{{ config('app.name') }}</span>
         </a>
 
         <!-- Sidebar -->

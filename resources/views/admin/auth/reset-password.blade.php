@@ -8,7 +8,7 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="{{ route('admin.login.index') }}" class="h1"><b>JKUAT</b>Clearance</a>
+                <a href="{{ route('admin.login.index') }}" class="h1">{{ config('app.name') }}</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Enter your email to reset your password</p>

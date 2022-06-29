@@ -24,6 +24,15 @@ class RedirectIfAuthenticated
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
 
+//                switch ($guard) {
+//                    case 'user':
+//                        $route = 'admin.index';
+//                        break;
+//                    default:
+//                        $route = 'student.index';
+//                        break;
+//                }
+
                 if ($request->is('admin') || $request->is('admin/*')) {
                     return redirect()->guest(route('admin.index') );
                 }

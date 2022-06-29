@@ -22,14 +22,14 @@
                                 <div class="form-group">
                                     <label>Active From</label>
                                     <input type="date" name="active_from" id="active_from" class="form-control @error('active_from') is-invalid @enderror" placeholder="Active From">
-                                    @error('active_from')<div class="invalid-feedback">{{ $message }}</div>@endif
+                                    @error('active_from') <div class="invalid-feedback">{{ $message }}</div> @endif
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-group">
                                     <label>Active To</label>
                                     <input type="date" name="active_to" id="active_to" class="form-control @error('active_to') is-invalid @enderror" placeholder="Active To">
-                                    @error('active_to')<div class="invalid-feedback">{{ $message }}</div>@endif
+                                    @error('active_to') <div class="invalid-feedback">{{ $message }}</div> @endif
                                 </div>
                             </div>
 

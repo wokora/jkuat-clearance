@@ -13,4 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::prefix('auth')->group(function(){
+
+    Route::middleware('guest')->group(function(){
+
+        Route::prefix('login')->name('login.')->group(function(){
+            Route::view('/','student.auth.login')->name('index');
+            Route::post('/', [\App\Http\Controllers\Student\Auth\LoginController::class, 'login']);
+        });
+
+        Route::prefix('register')->name('register.')->group(function(){
+            Route::view('/','student.auth.register')->name('index');
+            Route::post('/', [\App\Http\Controllers\Student\Auth\RegisterController::class, 'register']);
+        });
+
+        Route::prefix('reset-password')->name('reset-password.')->group(function(){
+            Route::view('/','student.auth.reset-password')->name('index');
+            Route::post('/', [\App\Http\Controllers\Student\Auth\PasswordController::class, 'reset'])->name('reset');
+        });
+
+    });
+
+    Route::get('logout', [\App\Http\Controllers\Student\Auth\LogoutController::class, 'logout'])->name('logout');
+});
+
+Route::middleware('auth:student')->group(function(){
+    Route::view('/', 'welcome')->name('index');
+});
