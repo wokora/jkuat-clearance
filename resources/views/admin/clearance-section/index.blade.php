@@ -23,6 +23,7 @@
                 <td>{{ $section->order }}</td>
                 <td align="right">
                     <a href="{{ route('admin.clearance.clearance-section.show', [ $clearance->id, $section->id ]) }}" class="btn btn-primary"> Show </a>
+                    <a href="{{ route('admin.clearance.clearance-section.user.index', [ $clearance->id, $section->id ]) }}" class="btn btn-primary"> Users</a>
                     <a href="{{ route('admin.clearance.clearance-section.edit', [ $clearance->id, $section->id ]) }}" class="btn btn-primary"> Edit </a>
                 </td>
             </tr>

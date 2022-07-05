@@ -11,4 +11,8 @@ class Section extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'clearance_section';
+
+    public function users(){
+        return $this->hasMany(SectionUser::class, 'clearance_section_id');
+    }
 }

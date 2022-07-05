@@ -18,6 +18,7 @@ class CreateUserClearanceSectionTable extends Migration
             $table->foreignId('user_clearance_id')->references('id')->on('user_clearance')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('clearance_section_id')->references('id')->on('clearance_section')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
