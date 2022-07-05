@@ -25,6 +25,7 @@
                 <td>{{ $clearance->active_to }}</td>
                 <td align="right">
                     <a href="{{ route('admin.clearance.clearance-section.index', [ $clearance->id ]) }}" class="btn btn-primary"> Sections</a>
+                    <a href="{{ route('admin.clearance.user.index', [ $clearance->id ]) }}" class="btn btn-primary"> Users</a>
                     <a href="{{ route('admin.clearance.edit', [ $clearance->id ]) }}" class="btn btn-primary"> Edit </a>
                 </td>
             </tr>

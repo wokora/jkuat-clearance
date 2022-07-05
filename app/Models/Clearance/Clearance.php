@@ -12,8 +12,12 @@ class Clearance extends Model
 
     protected $table = 'clearance';
 
-    protected function sections(){
+    public function sections(){
         return $this->hasMany(Section::class, 'clearance_id');
+    }
+
+    public function users(){
+        return $this->hasMany(User::class, 'clearance_id');
     }
 
 }

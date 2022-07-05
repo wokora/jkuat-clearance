@@ -37,7 +37,9 @@ Route::middleware('auth:user')->group(function(){
     Route::resource('user', \App\Http\Controllers\Admin\User\UserController::class);
     Route::resource('student', \App\Http\Controllers\Admin\Student\StudentController::class);
     Route::resource('clearance', \App\Http\Controllers\Admin\Clearance\ClearanceController::class);
+    Route::resource('clearance.user', \App\Http\Controllers\Admin\Clearance\ClearanceUserController::class);
     Route::resource('clearance.clearance-section', \App\Http\Controllers\Admin\Clearance\ClearanceSectionController::class);
+    Route::resource('clearance.clearance-section.user', \App\Http\Controllers\Admin\Clearance\ClearanceSectionUserController::class);
     Route::resource('clearance-status', \App\Http\Controllers\Admin\Clearance\ClearanceStatusController::class);
     Route::resource('clearance-section-status', \App\Http\Controllers\Admin\Clearance\ClearanceSectionStatusController::class);
 });
