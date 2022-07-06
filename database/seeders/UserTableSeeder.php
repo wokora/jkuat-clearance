@@ -21,6 +21,12 @@ class UserTableSeeder extends Seeder
                 'first_name' => 'Nyangoto',
                 'email' => 'wokora@jkuat.ac.ke',
                 'password' => 7060
+            ],
+            [
+                'surname' => 'Ojunga',
+                'first_name' => 'George',
+                'email' => 'gomondi@jkuat.ac.ke',
+                'password' => 2567
             ]
         ];
 
