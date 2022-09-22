@@ -1,0 +1,38 @@
+<?php
+
+namespace Database\Seeders;
+use App\Models\Student\Student;
+use Illuminate\Database\Seeder;
+
+class StudentSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $students = [
+            
+            [
+                'surname' => 'Ojunga',
+                'first_name' => 'George',
+                'registration_number' => 'SCM221-1234/2022',
+                'email' => 'gomondi@student.jkuat.ac.ke',
+                'password' => 2567
+            ]
+        ];
+
+        foreach ($students as $student){
+            $new_student = new Student();
+            $new_student->surname = $student['surname'];
+            $new_student->first_name = $student['first_name'];
+            $new_student->registration_number = $student['registration_number'];
+            $new_student->email = $user['email'];
+            $new_student->password = Hash::make( $user['password'] );
+            $new_student->save();
+        }
+        
+    }
+}
