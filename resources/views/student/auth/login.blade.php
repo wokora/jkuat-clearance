@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
 
-                <p class="login-box-msg">Sign in to start your session</p>
+                <p class="login-box-msg">Sign in to start start Clearance</p>
 
                 @if( session()->has('success') )
                     <div class="alert alert-success">{{ session()->get('success') }}</div>

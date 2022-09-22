@@ -78,7 +78,7 @@
         <!-- Brand Logo -->
         <a href="{{ route('student.index') }}" class="brand-link">
             <img src="/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">BURSARY APP</span>
+            <span class="brand-text font-weight-light">Clearance Application</span>
         </a>
 
         <!-- Sidebar -->
@@ -110,7 +110,7 @@
                     <li class="nav-item">
                         <a href="{{ route('student.application.index') }}" class="nav-link {{ request()->routeIs('student.form.*') ? ' active' : '' }}">
                             <i class="nav-icon fas fa-th"></i>
-                            <p>Applications Forms</p>
+                            <p>Clearance Sections</p>
                         </a>
                     </li>
                 </ul>

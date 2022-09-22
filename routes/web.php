@@ -38,5 +38,7 @@ Route::prefix('auth')->group(function(){
 });
 
 Route::middleware('auth:student')->group(function(){
-    Route::view('/', 'welcome')->name('index');
+    Route::view('/', 'student.dashboard')->name('index');
+    Route::resource('application', \App\Http\Controllers\Student\Student\ApplicationController::class);
+    Route::resource('Section', \App\Http\Controllers\Student\Student\SectionController::class);
 });
